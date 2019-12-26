@@ -89,19 +89,23 @@ void loop()
     {
       if(DEBUG) Serial.println("GAUCHE");
       liaisonSerie.write(MESSAGE_GAUCHE_RAPIDE);
+      delay(15);
     }
     if((etat_gauche_droite_joystick>=550)&&(etat_gauche_droite_joystick<900))
     {
       liaisonSerie.write(MESSAGE_GAUCHE_LENT);
+      delay(30);
     }
     if((etat_gauche_droite_joystick>100)&&(etat_gauche_droite_joystick<=450))
     {
       liaisonSerie.write(MESSAGE_DROITE_LENT);
+      delay(30);
     }
     if(etat_gauche_droite_joystick<=100)
     {
       if(DEBUG) Serial.println("DROITE");
       liaisonSerie.write(MESSAGE_DROITE_RAPIDE);
+      delay(15);
     }
     
     //etat_avant_arriere_joystick
@@ -111,19 +115,23 @@ void loop()
     {
       if(DEBUG) Serial.println("ARRIERE");
       liaisonSerie.write(MESSAGE_ARRIERE_RAPIDE);
+      delay(15);
     }
     if((etat_avant_arriere_joystick>=550)&&(etat_avant_arriere_joystick<900))
     {
       liaisonSerie.write(MESSAGE_ARRIERE_LENT);
+      delay(30);
     }
     if((etat_avant_arriere_joystick>100)&&(etat_avant_arriere_joystick<=450))
     {
       liaisonSerie.write(MESSAGE_AVANT_LENT);
+      delay(30);
     }
     if(etat_avant_arriere_joystick<=100)
     {
       if(DEBUG) Serial.println("AVANT");
       liaisonSerie.write(MESSAGE_AVANT_RAPIDE);
+      delay(15);
     }
   }
 
