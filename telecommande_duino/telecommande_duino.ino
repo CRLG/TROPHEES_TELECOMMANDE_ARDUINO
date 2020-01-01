@@ -56,26 +56,31 @@ void loop()
   {
     if(DEBUG) Serial.println("HAUT (JAUNE)");
     liaisonSerie.write(MESSAGE_JAUNE);
+    delay(200); //petit delai pour laisser le temps au doigt de se retirer du bouton
   }
   if(etat_bouton_vert==0)
   {
     if(DEBUG) Serial.println("BAS (VERT)");
     liaisonSerie.write(MESSAGE_VERT);
+    delay(200); //petit delai pour laisser le temps au doigt de se retirer du bouton
   }
   if(etat_bouton_bleu==0)
   {
     if(DEBUG) Serial.println("GAUCHE (BLEU)");
     liaisonSerie.write(MESSAGE_BLEU);
+    delay(200); //petit delai pour laisser le temps au doigt de se retirer du bouton
   }
   if(etat_bouton_rouge==0)
   {
     if(DEBUG) Serial.println("DROITE (ROUGE)");
     liaisonSerie.write(MESSAGE_ROUGE);
+    delay(200); //petit delai pour laisser le temps au doigt de se retirer du bouton
   }
   if(etat_click_joystick==0)
   {
     if(DEBUG) Serial.println("JOYSTICK CLICK");
     liaisonSerie.write(MESSAGE_CLICK);
+    delay(200); //petit delai pour laisser le temps au doigt de se retirer du bouton
   }
 
   //si l'état du joystick change on envoit une donnée sur le port série
